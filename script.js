@@ -1,4 +1,4 @@
-// Scroll reveal animation
+// Scroll reveal
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
@@ -20,3 +20,4 @@ toggle.onclick = () => {
   toggle.textContent =
     document.body.classList.contains("light") ? "🌙" : "☀️";
 };
+

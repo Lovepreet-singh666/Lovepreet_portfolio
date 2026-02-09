@@ -1,3 +1,18 @@
+/* Background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0,255,213,0.06), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(0,255,213,0.04), transparent 40%),
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  pointer-events: none;
+  z-index: -1;
+}
+
 :root {
   --bg: #0b0b0b;
   --text: #eaeaea;
@@ -29,10 +44,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
+  padding: 16px 40px;
   position: sticky;
   top: 0;
   background: var(--bg);
+  backdrop-filter: blur(10px);
 }
 
 nav ul {
@@ -55,7 +71,7 @@ nav a {
 
 /* HERO */
 .hero {
-  min-height: 70vh;
+  min-height: 55vh;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -67,7 +83,7 @@ nav a {
 }
 
 .hero-buttons {
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .btn {
@@ -91,12 +107,18 @@ nav a {
 section {
   max-width: 900px;
   margin: auto;
-  padding: 50px 20px;
+  padding: 32px 20px;
+}
+
+section:not(.hero) {
+  background: rgba(28, 28, 28, 0.65);
+  border-radius: 16px;
+  margin-bottom: 20px;
 }
 
 h2 {
   color: var(--accent);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 h3 {
@@ -105,15 +127,15 @@ h3 {
 
 p {
   line-height: 1.7;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 /* CARDS */
 .card {
   background: var(--card);
-  padding: 25px;
+  padding: 22px;
   border-radius: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 /* SKILLS */
@@ -127,7 +149,7 @@ p {
 
 /* WHY ME */
 .why-list li {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 /* CONTACT */
@@ -145,7 +167,7 @@ footer {
 /* SCROLL ANIMATION */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(25px);
   transition: 0.6s ease;
 }
 

@@ -29,10 +29,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: var(--bg);
+  padding: 18px 40px;
   position: sticky;
   top: 0;
+  background: var(--bg);
 }
 
 nav ul {
@@ -55,11 +55,11 @@ nav a {
 
 /* HERO */
 .hero {
-  height: 90vh;
+  min-height: 70vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
 }
 
 .hero span {
@@ -73,7 +73,7 @@ nav a {
 .btn {
   background: var(--accent);
   color: #000;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border-radius: 8px;
   text-decoration: none;
   margin-right: 10px;
@@ -81,7 +81,7 @@ nav a {
 
 .btn-outline {
   border: 1px solid var(--accent);
-  padding: 12px 20px;
+  padding: 12px 22px;
   border-radius: 8px;
   color: var(--accent);
   text-decoration: none;
@@ -91,12 +91,21 @@ nav a {
 section {
   max-width: 900px;
   margin: auto;
-  padding: 80px 20px;
+  padding: 50px 20px;
 }
 
 h2 {
   color: var(--accent);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 14px;
 }
 
 /* CARDS */
@@ -104,7 +113,7 @@ h2 {
   background: var(--card);
   padding: 25px;
   border-radius: 14px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 /* SKILLS */
@@ -118,7 +127,7 @@ h2 {
 
 /* WHY ME */
 .why-list li {
-  margin: 12px 0;
+  margin: 10px 0;
 }
 
 /* CONTACT */
@@ -136,7 +145,7 @@ footer {
 /* SCROLL ANIMATION */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(30px);
   transition: 0.6s ease;
 }
 
